@@ -10,8 +10,9 @@ import AppTrackingTransparency
 import AdSupport
 
 struct ContentView: View {
+    @AppStorage("trackingStatus") var trackingStatus = "Unknown"
     var body: some View {
-        MainView()
+        MainView(trackingStatus: $trackingStatus)
     }
 }
 
