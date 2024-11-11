@@ -7,6 +7,9 @@
 - [ ] Set app up for AdMob
 - [ ] App Tracking Transparency
 ,,
+- [ ] DetailView
+ - [ ] Have indicator for main event (and co-main)
+,,
 - [ ] Basic UI components
     - [ ] Event List View
     - [ ] Event Detail View

@@ -16,13 +16,14 @@
 		1618B39E2CE1271D001A6019 /* Fight_WatchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B39D2CE1271D001A6019 /* Fight_WatchUITestsLaunchTests.swift */; };
 		1618B3B32CE26DEA001A6019 /* Fighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B3B22CE26DEA001A6019 /* Fighter.swift */; };
 		1618B3B52CE26DF4001A6019 /* Fight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B3B42CE26DF4001A6019 /* Fight.swift */; };
-		1618B3B72CE26DFB001A6019 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B3B62CE26DFB001A6019 /* Event.swift */; };
+		1618B3B72CE26DFB001A6019 /* FightEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B3B62CE26DFB001A6019 /* FightEvent.swift */; };
 		1618B3B92CE26F06001A6019 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B3B82CE26F06001A6019 /* EventListView.swift */; };
 		1618B3BB2CE26F0F001A6019 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B3BA2CE26F0F001A6019 /* EventDetailView.swift */; };
 		1618B3BE2CE26F26001A6019 /* DescriptiveProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B3BD2CE26F26001A6019 /* DescriptiveProgressView.swift */; };
 		1618B3C12CE27109001A6019 /* FightWatchHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B3C02CE27109001A6019 /* FightWatchHelper.swift */; };
 		1618B3C32CE27E4E001A6019 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B3C22CE27E4E001A6019 /* MockData.swift */; };
 		1618B3C52CE27F80001A6019 /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B3C42CE27F80001A6019 /* UIFont+Custom.swift */; };
+		1618B3C72CE29626001A6019 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B3C62CE29626001A6019 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,13 +57,14 @@
 		1618B3AA2CE12760001A6019 /* DEVLOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DEVLOG.md; sourceTree = "<group>"; };
 		1618B3B22CE26DEA001A6019 /* Fighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fighter.swift; sourceTree = "<group>"; };
 		1618B3B42CE26DF4001A6019 /* Fight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fight.swift; sourceTree = "<group>"; };
-		1618B3B62CE26DFB001A6019 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		1618B3B62CE26DFB001A6019 /* FightEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightEvent.swift; sourceTree = "<group>"; };
 		1618B3B82CE26F06001A6019 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 		1618B3BA2CE26F0F001A6019 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
 		1618B3BD2CE26F26001A6019 /* DescriptiveProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptiveProgressView.swift; sourceTree = "<group>"; };
 		1618B3C02CE27109001A6019 /* FightWatchHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightWatchHelper.swift; sourceTree = "<group>"; };
 		1618B3C22CE27E4E001A6019 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		1618B3C42CE27F80001A6019 /* UIFont+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
+		1618B3C62CE29626001A6019 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		1618B3AB2CE12916001A6019 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1618B3C62CE29626001A6019 /* MainView.swift */,
 				1618B3BC2CE26F1A001A6019 /* Components */,
 				1618B3B82CE26F06001A6019 /* EventListView.swift */,
 				1618B3BA2CE26F0F001A6019 /* EventDetailView.swift */,
@@ -174,7 +177,7 @@
 			children = (
 				1618B3B22CE26DEA001A6019 /* Fighter.swift */,
 				1618B3B42CE26DF4001A6019 /* Fight.swift */,
-				1618B3B62CE26DFB001A6019 /* Event.swift */,
+				1618B3B62CE26DFB001A6019 /* FightEvent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,13 +330,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1618B3B52CE26DF4001A6019 /* Fight.swift in Sources */,
+				1618B3C72CE29626001A6019 /* MainView.swift in Sources */,
 				1618B3B92CE26F06001A6019 /* EventListView.swift in Sources */,
 				1618B3BE2CE26F26001A6019 /* DescriptiveProgressView.swift in Sources */,
 				1618B3C12CE27109001A6019 /* FightWatchHelper.swift in Sources */,
 				1618B3832CE1271A001A6019 /* ContentView.swift in Sources */,
 				1618B3B32CE26DEA001A6019 /* Fighter.swift in Sources */,
 				1618B3812CE1271A001A6019 /* Fight_WatchApp.swift in Sources */,
-				1618B3B72CE26DFB001A6019 /* Event.swift in Sources */,
+				1618B3B72CE26DFB001A6019 /* FightEvent.swift in Sources */,
 				1618B3BB2CE26F0F001A6019 /* EventDetailView.swift in Sources */,
 				1618B3C52CE27F80001A6019 /* UIFont+Custom.swift in Sources */,
 				1618B3C32CE27E4E001A6019 /* MockData.swift in Sources */,

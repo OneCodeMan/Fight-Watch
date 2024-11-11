@@ -10,9 +10,12 @@ import Foundation
 struct Fighter: Decodable, Hashable {
     
     static func == (lhs: Fighter, rhs: Fighter) -> Bool {
+        lhs.id == rhs.id &&
         lhs.name == rhs.name &&
         lhs.record == rhs.record
     }
+    
+    var id = UUID()
     
     // "Jon Jones"
     var name: String

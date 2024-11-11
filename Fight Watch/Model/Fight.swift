@@ -10,11 +10,13 @@ import Foundation
 struct Fight: Decodable, Hashable {
     
     static func == (lhs: Fight, rhs: Fight) -> Bool {
+        lhs.id == rhs.id &&
         lhs.fighterOne == rhs.fighterOne &&
         lhs.fighterTwo == rhs.fighterTwo &&
         lhs.weight == rhs.weight
     }
     
+    var id = UUID()
     var fighterOne: Fighter
     var fighterTwo: Fighter
     var weight: String
