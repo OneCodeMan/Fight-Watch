@@ -3,12 +3,12 @@
 # WAVES
 
 # WAVE 1
-,,
-- [ ] Set app up for AdMob
-- [ ] App Tracking Transparency
+- [ ] Ads
+ - [ ] how do I keep pumping out ads?
 ,,
 - [ ] DetailView
- - [ ] Have indicator for main event (and co-main)
+    - [ ] Have indicator for main event (and co-main)
+    - [ ] "BIG names"
 ,,
 - [ ] Basic UI components
     - [ ] Event List View
@@ -25,6 +25,8 @@
 # History
 
 ## November 11, 2024
+- [x] Set app up for AdMob
+- [x] App Tracking Transparency
 - [x] Copy over the web code, the components
 
 

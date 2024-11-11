@@ -15,15 +15,16 @@ struct MainView: View {
     @Binding var trackingStatus: String
     
     // MARK: Ads
-//    @EnvironmentObject var adViewModel: InterstitialViewModel
+    @EnvironmentObject var adViewModel: InterstitialViewModel
 
     var body: some View {
         NavigationStack {
             EventListView(events: MockData.mockEventsList)
-            .onAppear {
-                print("main view appeared")
-                checkTrackingStatus()
-            }
+                .environmentObject(adViewModel)
+                .onAppear {
+                    print("main view appeared")
+                    checkTrackingStatus()
+                }
         }
         
     }

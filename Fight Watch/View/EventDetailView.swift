@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EventDetailView: View {
+    @EnvironmentObject var adViewModel: InterstitialViewModel
     let event: FightEvent
     
     var body: some View {
@@ -16,7 +17,6 @@ struct EventDetailView: View {
                 VStack {
                     Text(event.title)
                         .font(.eventNameFont)
-                        .padding(.top, 2)
                         .onTapGesture {
                             // TODO: navigate to event URL page. webview
                         }
@@ -82,6 +82,13 @@ struct EventDetailView: View {
                 }
             } // ScrollView
             .padding()
+            .onAppear {
+                delay(interval: 2.5) {
+                    Task {
+                        await adViewModel.showAd()
+                    }
+                }
+            }
         }
     }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EventListView: View {
+    @EnvironmentObject var adViewModel: InterstitialViewModel
     let events: [FightEvent]
     var body: some View {
         VStack {
@@ -35,11 +36,20 @@ struct EventListView: View {
         }
         .navigationTitle("MMA Events")
         .onAppear {
-            print("events list view")
+            delay(interval: 2.0) {
+                Task {
+                    await adViewModel.showAd()
+                }
+            }
+            
         }
     }
 }
 
 #Preview {
     EventListView(events: MockData.mockEventsList)
+}
+
+func delay(interval: TimeInterval, closure: @escaping () -> Void) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + interval, execute: closure)
 }

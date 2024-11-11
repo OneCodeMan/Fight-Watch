@@ -24,6 +24,8 @@
 		1618B3C32CE27E4E001A6019 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B3C22CE27E4E001A6019 /* MockData.swift */; };
 		1618B3C52CE27F80001A6019 /* UIFont+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B3C42CE27F80001A6019 /* UIFont+Custom.swift */; };
 		1618B3C72CE29626001A6019 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B3C62CE29626001A6019 /* MainView.swift */; };
+		1618B3CA2CE2A250001A6019 /* AdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B3C92CE2A250001A6019 /* AdViewModel.swift */; };
+		1618B3CD2CE2A2AA001A6019 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 1618B3CC2CE2A2AA001A6019 /* GoogleMobileAds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		1618B3C22CE27E4E001A6019 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		1618B3C42CE27F80001A6019 /* UIFont+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Custom.swift"; sourceTree = "<group>"; };
 		1618B3C62CE29626001A6019 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		1618B3C92CE2A250001A6019 /* AdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewModel.swift; sourceTree = "<group>"; };
+		1618B3CE2CE2A2BB001A6019 /* Fight-Watch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Fight-Watch-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1618B3CD2CE2A2AA001A6019 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +121,8 @@
 		1618B37F2CE1271A001A6019 /* Fight Watch */ = {
 			isa = PBXGroup;
 			children = (
+				1618B3CE2CE2A2BB001A6019 /* Fight-Watch-Info.plist */,
+				1618B3C82CE2A243001A6019 /* ViewModel */,
 				1618B3BF2CE27100001A6019 /* Util */,
 				1618B3AD2CE12922001A6019 /* Model */,
 				1618B3AC2CE1291E001A6019 /* Data */,
@@ -199,6 +206,14 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
+		1618B3C82CE2A243001A6019 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1618B3C92CE2A250001A6019 /* AdViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -215,6 +230,9 @@
 			dependencies = (
 			);
 			name = "Fight Watch";
+			packageProductDependencies = (
+				1618B3CC2CE2A2AA001A6019 /* GoogleMobileAds */,
+			);
 			productName = "Fight Watch";
 			productReference = 1618B37D2CE1271A001A6019 /* Fight Watch.app */;
 			productType = "com.apple.product-type.application";
@@ -287,6 +305,9 @@
 				Base,
 			);
 			mainGroup = 1618B3742CE1271A001A6019;
+			packageReferences = (
+				1618B3CB2CE2A2AA001A6019 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			productRefGroup = 1618B37E2CE1271A001A6019 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -340,6 +361,7 @@
 				1618B3B72CE26DFB001A6019 /* FightEvent.swift in Sources */,
 				1618B3BB2CE26F0F001A6019 /* EventDetailView.swift in Sources */,
 				1618B3C52CE27F80001A6019 /* UIFont+Custom.swift in Sources */,
+				1618B3CA2CE2A250001A6019 /* AdViewModel.swift in Sources */,
 				1618B3C32CE27E4E001A6019 /* MockData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +529,7 @@
 				DEVELOPMENT_TEAM = HY3LPP8363;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Fight-Watch-Info.plist";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "We use tracking to improve your experience by providing personalized content and ads.We use tracking to improve your experience by providing personalized content and ads.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -537,6 +560,7 @@
 				DEVELOPMENT_TEAM = HY3LPP8363;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Fight-Watch-Info.plist";
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "We use tracking to improve your experience by providing personalized content and ads.We use tracking to improve your experience by providing personalized content and ads.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -672,6 +696,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1618B3CB2CE2A2AA001A6019 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = exactVersion;
+				version = 11.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1618B3CC2CE2A2AA001A6019 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1618B3CB2CE2A2AA001A6019 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1618B3752CE1271A001A6019 /* Project object */;
 }
