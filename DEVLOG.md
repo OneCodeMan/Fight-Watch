@@ -1,5 +1,11 @@
 # DEVLOG
 
+# Yap
+
+## Nov 12, 2024
+From Pinselton, I've learned how to implement basic ads, App Tracking, I've learned about UserDefaults.
+I've learned about environment variables. it gets easier to do these.
+
 # WAVES
 
 # WAVE 1

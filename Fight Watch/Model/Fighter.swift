@@ -15,11 +15,17 @@ struct Fighter: Decodable, Hashable {
         lhs.record == rhs.record
     }
     
-    var id = UUID()
+    var id: UUID?
     
     // "Jon Jones"
     var name: String
     
     // "13-0-1"
     var record: String
+    
+    init(id: UUID? = UUID(), name: String, record: String) {
+        self.id = id
+        self.name = name
+        self.record = record
+    }
 }

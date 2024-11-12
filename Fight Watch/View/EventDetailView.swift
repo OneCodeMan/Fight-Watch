@@ -28,7 +28,7 @@ struct EventDetailView: View {
                     Text(event.date)
                         .font(.eventDateFont)
                         .padding(1)
-                    Text(event.daysFromNow)
+                    Text(event.daysFromNow ?? "")
                         .font(.eventDaysFromNowFont)
                         .foregroundStyle(.red)
                 }

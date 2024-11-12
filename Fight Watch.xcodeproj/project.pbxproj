@@ -28,6 +28,7 @@
 		1618B3CD2CE2A2AA001A6019 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 1618B3CC2CE2A2AA001A6019 /* GoogleMobileAds */; };
 		16E4F97F2CE3881B0053DD35 /* CustomWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E4F97E2CE3881B0053DD35 /* CustomWebView.swift */; };
 		16E4F9812CE3958D0053DD35 /* mma_events.json in Resources */ = {isa = PBXBuildFile; fileRef = 16E4F9802CE3958D0053DD35 /* mma_events.json */; };
+		16E4F9832CE3A44F0053DD35 /* FightWatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E4F9822CE3A44F0053DD35 /* FightWatchService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		1618B3CE2CE2A2BB001A6019 /* Fight-Watch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Fight-Watch-Info.plist"; sourceTree = SOURCE_ROOT; };
 		16E4F97E2CE3881B0053DD35 /* CustomWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWebView.swift; sourceTree = "<group>"; };
 		16E4F9802CE3958D0053DD35 /* mma_events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mma_events.json; sourceTree = "<group>"; };
+		16E4F9822CE3A44F0053DD35 /* FightWatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightWatchService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 			children = (
 				16E4F9802CE3958D0053DD35 /* mma_events.json */,
 				1618B3C22CE27E4E001A6019 /* MockData.swift */,
+				16E4F9822CE3A44F0053DD35 /* FightWatchService.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				1618B3B92CE26F06001A6019 /* EventListView.swift in Sources */,
 				1618B3BE2CE26F26001A6019 /* DescriptiveProgressView.swift in Sources */,
 				1618B3C12CE27109001A6019 /* FightWatchHelper.swift in Sources */,
+				16E4F9832CE3A44F0053DD35 /* FightWatchService.swift in Sources */,
 				1618B3832CE1271A001A6019 /* ContentView.swift in Sources */,
 				1618B3B32CE26DEA001A6019 /* Fighter.swift in Sources */,
 				1618B3812CE1271A001A6019 /* Fight_WatchApp.swift in Sources */,

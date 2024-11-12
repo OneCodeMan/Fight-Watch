@@ -11,7 +11,6 @@ struct FightEvent: Decodable, Hashable {
     
     // Hashable
     static func == (lhs: FightEvent, rhs: FightEvent) -> Bool {
-        lhs.id == rhs.id &&
         lhs.organization == rhs.organization &&
         lhs.title == rhs.title &&
         lhs.date == rhs.date &&
@@ -19,16 +18,17 @@ struct FightEvent: Decodable, Hashable {
         lhs.eventURL == rhs.eventURL
     }
     
-    var id = UUID()
+    var id: UUID?
     var organization: String
     var title: String
     var date: String
     var location: String
-    var daysFromNow: String
+    var daysFromNow: String?
     var eventURL: String
     var fights: [Fight]
     
     init(organization: String, title: String, date: String, location: String, daysFromNow: String = "5 days from now", eventURL: String, fights: [Fight]) {
+        self.id = UUID()
         self.organization = organization
         self.title = title
         self.date = date
@@ -46,7 +46,6 @@ struct FightEvent: Decodable, Hashable {
         case location
         case eventURL = "event_url"
         case fights
-        case daysFromNow
     }
     
 }

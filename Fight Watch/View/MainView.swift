@@ -19,7 +19,7 @@ struct MainView: View {
 
     var body: some View {
         NavigationStack {
-            EventListView(events: MockData.mockEventsList)
+            EventListView(events: FightWatchService.shared.fightEvents)
                 .environmentObject(adViewModel)
                 .onAppear {
                     print("main view appeared")

@@ -16,8 +16,21 @@ struct Fight: Decodable, Hashable {
         lhs.weight == rhs.weight
     }
     
-    var id = UUID()
+    var id: UUID?
     var fighterOne: Fighter
     var fighterTwo: Fighter
     var weight: String
+    
+    init(id: UUID = UUID(), fighterOne: Fighter, fighterTwo: Fighter, weight: String) {
+        self.id = id
+        self.fighterOne = fighterOne
+        self.fighterTwo = fighterTwo
+        self.weight = weight
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case fighterOne = "fighter_one"
+        case fighterTwo = "fighter_two"
+        case weight
+    }
 }
