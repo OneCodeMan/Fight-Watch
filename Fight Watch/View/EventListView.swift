@@ -36,7 +36,7 @@ struct EventListView: View {
                     .padding()
                     // end of EventListItemView
                 }
-                .listRowSeparator(.hidden)
+                // .listRowSeparator(.hidden)
             }
             
         }
