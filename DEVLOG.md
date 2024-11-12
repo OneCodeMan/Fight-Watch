@@ -11,9 +11,8 @@ I've learned about environment variables. it gets easier to do these.
 # WAVE 1
 
 ## Wave 1.1
-MUST-HAVES:
-- [ ] List view styled
-    - [ ] on list view change how we parse org
+MUST-HAVES
+- [ ] Add octagon background border to "vs""
 - [ ] App logo
 - [ ] Launch Screen
 
@@ -40,6 +39,8 @@ UI
 # History
 
 ## November 12, 2024
+- [x] List view styled
+    - [x] on list view change how we parse org
 - [x] Get the JSON in.
 - [x] Helper functions to parse data
 - [x] Only display current/upcoming events. Do not display past events.

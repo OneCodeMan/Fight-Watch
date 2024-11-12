@@ -11,6 +11,9 @@ struct EventListView: View {
     @EnvironmentObject var adViewModel: InterstitialViewModel
     let events: [FightEvent]
     
+    // MARK: alert variables bool states
+    @State private var displayPremiumSheet: Bool = false
+    
     var body: some View {
         VStack {
             
@@ -44,7 +47,19 @@ struct EventListView: View {
                     await adViewModel.showAd()
                 }
             }
-            
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    // TODO: premium
+                    // self.displayPremiumSheet = true
+                } label: {
+                    // TODO: premium
+                    Image(systemName: "cloud.snow.fill")
+                        .symbolRenderingMode(.palette)
+                        .foregroundColor(.blue)
+                }
+            }
         }
     }
 }
