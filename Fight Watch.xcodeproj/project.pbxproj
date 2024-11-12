@@ -26,6 +26,8 @@
 		1618B3C72CE29626001A6019 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B3C62CE29626001A6019 /* MainView.swift */; };
 		1618B3CA2CE2A250001A6019 /* AdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1618B3C92CE2A250001A6019 /* AdViewModel.swift */; };
 		1618B3CD2CE2A2AA001A6019 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 1618B3CC2CE2A2AA001A6019 /* GoogleMobileAds */; };
+		16E4F97F2CE3881B0053DD35 /* CustomWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E4F97E2CE3881B0053DD35 /* CustomWebView.swift */; };
+		16E4F9812CE3958D0053DD35 /* mma_events.json in Resources */ = {isa = PBXBuildFile; fileRef = 16E4F9802CE3958D0053DD35 /* mma_events.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		1618B3C62CE29626001A6019 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		1618B3C92CE2A250001A6019 /* AdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdViewModel.swift; sourceTree = "<group>"; };
 		1618B3CE2CE2A2BB001A6019 /* Fight-Watch-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Fight-Watch-Info.plist"; sourceTree = SOURCE_ROOT; };
+		16E4F97E2CE3881B0053DD35 /* CustomWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomWebView.swift; sourceTree = "<group>"; };
+		16E4F9802CE3958D0053DD35 /* mma_events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mma_events.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,8 +167,8 @@
 		1618B3AB2CE12916001A6019 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1618B3C62CE29626001A6019 /* MainView.swift */,
 				1618B3BC2CE26F1A001A6019 /* Components */,
+				1618B3C62CE29626001A6019 /* MainView.swift */,
 				1618B3B82CE26F06001A6019 /* EventListView.swift */,
 				1618B3BA2CE26F0F001A6019 /* EventDetailView.swift */,
 			);
@@ -174,6 +178,7 @@
 		1618B3AC2CE1291E001A6019 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				16E4F9802CE3958D0053DD35 /* mma_events.json */,
 				1618B3C22CE27E4E001A6019 /* MockData.swift */,
 			);
 			path = Data;
@@ -193,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				1618B3BD2CE26F26001A6019 /* DescriptiveProgressView.swift */,
+				16E4F97E2CE3881B0053DD35 /* CustomWebView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -324,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16E4F9812CE3958D0053DD35 /* mma_events.json in Resources */,
 				1618B3882CE1271D001A6019 /* Preview Assets.xcassets in Resources */,
 				1618B3852CE1271C001A6019 /* Assets.xcassets in Resources */,
 			);
@@ -362,6 +369,7 @@
 				1618B3BB2CE26F0F001A6019 /* EventDetailView.swift in Sources */,
 				1618B3C52CE27F80001A6019 /* UIFont+Custom.swift in Sources */,
 				1618B3CA2CE2A250001A6019 /* AdViewModel.swift in Sources */,
+				16E4F97F2CE3881B0053DD35 /* CustomWebView.swift in Sources */,
 				1618B3C32CE27E4E001A6019 /* MockData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

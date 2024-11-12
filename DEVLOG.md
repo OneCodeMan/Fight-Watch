@@ -5,16 +5,20 @@
 # WAVE 1
 
 ## Wave 1.1
-- [ ] DetailView
-    - [ ] Title can be tapped to get to a web page.
-- [ ] Ads
- - [ ] how do I keep pumping out ads?
- ,,
+,,
+Functionality
+- [ ] Get the JSON in.
+- [ ] Helper functions to parse data
+- [ ] Only display current/upcoming events. Do not display past events.
+- [ ] Style the List view...
+,,
+- [ ] Banner ad list view
+,,
 - [ ] App logo
 - [ ] Launch Screen
 ,,
-- [ ] Get the JSON in.
-
+- [ ] Ads
+ - [ ] how do I keep pumping out ads
 
 ## Wave 1.2
 - [ ] Widget View of most upcoming fight.
@@ -23,6 +27,10 @@
     - [ ] "BIG names"
 
 # History
+
+## November 12, 2024
+- [x] DetailView
+    - [x] Title can be tapped to get to a web page.
 
 ## November 11, 2024
 - [x] Basic UI components

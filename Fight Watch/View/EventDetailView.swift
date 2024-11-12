@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct EventDetailView: View {
+    @Environment(\.openURL) var openURL
     @EnvironmentObject var adViewModel: InterstitialViewModel
     let event: FightEvent
     
@@ -15,10 +16,11 @@ struct EventDetailView: View {
         NavigationStack {
             ScrollView {
                 VStack {
+                    Image(systemName: "link.circle.fill")
                     Text(event.title)
                         .font(.eventNameFont)
                         .onTapGesture {
-                            // TODO: navigate to event URL page. webview
+                            openURL(URL(string: event.eventURL)!)
                         }
                     Text(event.location)
                         .font(.eventLocationFont)
