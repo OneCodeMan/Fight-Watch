@@ -10,27 +10,30 @@ import SwiftUI
 struct EventListView: View {
     @EnvironmentObject var adViewModel: InterstitialViewModel
     let events: [FightEvent]
+    
     var body: some View {
         VStack {
             
             List(events, id: \.self) { event in
-                
                 NavigationLink(destination: EventDetailView(event: event)) {
                     // EventListItemView
-                    VStack {
+                    VStack(alignment: .leading) {
                         Text(event.title)
                             .font(.eventListItemTitle)
                         
                         HStack {
-                            Text(event.organization)
+                            Text(event.organization.lastWord.dropFirst().dropLast())
+                                .font(.eventListItemOrganization)
                             Text("|")
                             Text(event.date)
+                                .font(.eventListItemDate)
+                                .italic()
                         }
                     }
                     .padding()
-                    
                     // end of EventListItemView
                 }
+                .listRowSeparator(.hidden)
             }
             
         }
@@ -50,6 +53,14 @@ struct EventListView: View {
     EventListView(events: MockData.mockEventsList)
 }
 
+// TODO: PUT IN SEPARATE FILES
 func delay(interval: TimeInterval, closure: @escaping () -> Void) {
     DispatchQueue.main.asyncAfter(deadline: .now() + interval, execute: closure)
+}
+
+extension String {
+    var lastWord: String {
+        let words = self.split(separator: " ")
+        return words.last.map(String.init) ?? ""
+    }
 }

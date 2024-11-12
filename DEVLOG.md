@@ -11,20 +11,25 @@ I've learned about environment variables. it gets easier to do these.
 # WAVE 1
 
 ## Wave 1.1
-,,
-Functionality
-- [ ] Get the JSON in.
-- [ ] Helper functions to parse data
-- [ ] Only display current/upcoming events. Do not display past events.
-- [ ] Style the List view...
-,,
-- [ ] Banner ad list view
-,,
+MUST-HAVES:
+- [ ] List view styled
+    - [ ] on list view change how we parse org
 - [ ] App logo
 - [ ] Launch Screen
+
+GOOD TO HAVE:
+,,
+Functionality
+- [ ] Add to Calendar option
+    - [ ] https://medium.com/@thibault.giraudon/how-to-add-events-to-your-calendar-using-swiftui-and-eventkit-9b81528bf397
+,,
+UI
+- [ ] Banner ad list view
+- [ ] Octagon on text
+- [ ] Add fighter icon
 ,,
 - [ ] Ads
- - [ ] how do I keep pumping out ads
+ - [ ] how do I keep pumping out ads?
 
 ## Wave 1.2
 - [ ] Widget View of most upcoming fight.
@@ -35,6 +40,9 @@ Functionality
 # History
 
 ## November 12, 2024
+- [x] Get the JSON in.
+- [x] Helper functions to parse data
+- [x] Only display current/upcoming events. Do not display past events.
 - [x] DetailView
     - [x] Title can be tapped to get to a web page.
 

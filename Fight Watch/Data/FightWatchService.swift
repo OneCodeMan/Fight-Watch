@@ -26,12 +26,19 @@ final class FightWatchService: ObservableObject {
             }
         do {
             let data = try Data(contentsOf: url)
-                    let decoder = JSONDecoder()
-                    let mmaEvents = try decoder.decode(MMAEvents.self, from: data)
-                    return mmaEvents
+            let decoder = JSONDecoder()
+            var mmaEvents = try decoder.decode(MMAEvents.self, from: data)
+            
+            let currentDate = Date.now
+            
+            mmaEvents = mmaEvents
+                .sorted { ($0.eventDate ?? Date.distantPast) < ($1.eventDate ?? Date.distantPast) }
+                .filter { ($0.eventDate ?? Date.distantPast) >= currentDate }
+            
+            return mmaEvents
         } catch {
-            print("Failed to decode mma_events.json: \(error)")
-                    return []
+        print("Failed to decode mma_events.json: \(error)")
+                return []
         }
     }
 }

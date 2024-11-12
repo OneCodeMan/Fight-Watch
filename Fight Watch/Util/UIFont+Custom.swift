@@ -57,15 +57,15 @@ extension Font {
     
     // MARK: EventListView
     static var eventListItemTitle: Font {
-        return .system(size: 18.0).bold()
+        return .system(size: 22.0).bold()
     }
     
     static var eventListItemOrganization: Font {
-        return .system(size: 10.0)
+        return .system(size: 14.0, weight: .bold)
     }
     
     static var eventListItemDate: Font {
-        return .system(size: 10.0)
+        return .system(size: 15.0, weight: .medium)
     }
     
     

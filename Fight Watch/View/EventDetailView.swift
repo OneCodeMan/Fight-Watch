@@ -12,6 +12,8 @@ struct EventDetailView: View {
     @EnvironmentObject var adViewModel: InterstitialViewModel
     let event: FightEvent
     
+    @State var daysFromNow: String = ""
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -28,7 +30,7 @@ struct EventDetailView: View {
                     Text(event.date)
                         .font(.eventDateFont)
                         .padding(1)
-                    Text(event.daysFromNow ?? "")
+                    Text(self.daysFromNow)
                         .font(.eventDaysFromNowFont)
                         .foregroundStyle(.red)
                 }
@@ -85,12 +87,27 @@ struct EventDetailView: View {
             } // ScrollView
             .padding()
             .onAppear {
+                self.computeDaysFromNow()
+                
                 delay(interval: 2.5) {
                     Task {
                         await adViewModel.showAd()
                     }
                 }
             }
+        }
+    }
+    
+    // MARK: helper functions
+    private func computeDaysFromNow() {
+        let eventDate = event.eventDate ?? Date()
+                
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.day], from: .now, to: eventDate)
+        if let daysAwayFrom = components.day {
+            self.daysFromNow = "\(daysAwayFrom) days from now"
+        } else {
+            print("Can't compute days away from")
         }
     }
 }

@@ -27,6 +27,13 @@ struct FightEvent: Decodable, Hashable {
     var eventURL: String
     var fights: [Fight]
     
+    // Computed property to parse the date string into a Date object
+    var eventDate: Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, yyyy"
+        return dateFormatter.date(from: date)
+    }
+    
     init(organization: String, title: String, date: String, location: String, daysFromNow: String = "5 days from now", eventURL: String, fights: [Fight]) {
         self.id = UUID()
         self.organization = organization
