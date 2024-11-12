@@ -112,6 +112,43 @@ struct EventDetailView: View {
     }
 }
 
+
+// MARK: Octagon View for vs.
+struct OctagonTextView: View {
+    @Environment(\.colorScheme) var colorScheme
+    var text: String
+    var body: some View {
+        ZStack {
+            OctagonShape()
+                .stroke(colorScheme == .dark ? Color.white : Color.black, lineWidth: 1)
+                .frame(width: 50, height: 50)
+            Text(text)
+                .font(.title)
+                .foregroundColor(colorScheme == .dark ? Color.white : Color.black)
+                .padding(2)
+        }
+    }
+}
+struct OctagonShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        let size = min(rect.width, rect.height)
+        let sideLength = size / (2 + sqrt(2))
+        let offset = (size - sideLength) / 2
+
+        return Path { path in
+            path.move(to: CGPoint(x: rect.midX, y: rect.minY + offset))
+            path.addLine(to: CGPoint(x: rect.maxX - offset, y: rect.minY + offset))
+            path.addLine(to: CGPoint(x: rect.maxX, y: rect.midY))
+            path.addLine(to: CGPoint(x: rect.maxX - offset, y: rect.maxY - offset))
+            path.addLine(to: CGPoint(x: rect.midX, y: rect.maxY))
+            path.addLine(to: CGPoint(x: rect.minX + offset, y: rect.maxY - offset))
+            path.addLine(to: CGPoint(x: rect.minX, y: rect.midY))
+            path.addLine(to: CGPoint(x: rect.minX + offset, y: rect.minY + offset))
+            path.closeSubpath()
+        }
+    }
+}
+
 #Preview {
     EventDetailView(event: MockData.mockEvent1)
 }
