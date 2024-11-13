@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EventListView: View {
-    @EnvironmentObject var adViewModel: InterstitialViewModel
+    @StateObject var adViewModel: InterstitialViewModel = InterstitialViewModel()
     let events: [FightEvent]
     
     // MARK: alert variables bool states
@@ -53,9 +53,13 @@ struct EventListView: View {
                 Button {
                     // TODO: premium
                     // self.displayPremiumSheet = true
+                    Task {
+                        await adViewModel.showAd()
+                    }
+                    
                 } label: {
                     // TODO: premium
-                    Image(systemName: "cloud.snow.fill")
+                    Image(systemName: "medal.fill")
                         .symbolRenderingMode(.palette)
                         .foregroundColor(.blue)
                 }

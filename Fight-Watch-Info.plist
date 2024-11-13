@@ -177,5 +177,15 @@
 			<string>3qcr597p9d.skadnetwork</string>
 		</dict>
 	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIImageName</key>
+		<string>launch_screen</string>
+		<key>UILaunchScreen</key>
+		<dict>
+			<key>UIImageRespectsSafeAreaInsets</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>

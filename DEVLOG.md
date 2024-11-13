@@ -11,16 +11,15 @@ I've learned about environment variables. it gets easier to do these.
 # WAVE 1
 
 ## Wave 1.1
-MUST-HAVES
-- [ ] Add octagon background border to "vs""
-- [ ] App logo
-- [ ] Launch Screen
 
 GOOD TO HAVE:
 ,,
 Functionality
 - [ ] Add to Calendar option
+    - [ ] https://chatgpt.com/share/67338563-0128-8004-b437-5361037569a9
     - [ ] https://medium.com/@thibault.giraudon/how-to-add-events-to-your-calendar-using-swiftui-and-eventkit-9b81528bf397
+
+- [ ] "Rate us on the app store"!
 ,,
 UI
 - [ ] Banner ad list view
@@ -37,6 +36,12 @@ UI
     - [ ] "BIG names"
 
 # History
+
+## November 13, 2024
+MUST-HAVES
+- [x] App icon
+- [x] Launch Screen
+    - [ ] https://medium.com/@paponsmc/how-to-setup-launch-screen-on-swiftui-ios-16-for-ios-developer-a082b818a3bc
 
 ## November 12, 2024
 - [x] List view styled

@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import EventKit
 
 struct EventDetailView: View {
     @Environment(\.openURL) var openURL
-    @EnvironmentObject var adViewModel: InterstitialViewModel
+    @StateObject var adViewModel: InterstitialViewModel = InterstitialViewModel()
     let event: FightEvent
     
     @State var daysFromNow: String = ""
