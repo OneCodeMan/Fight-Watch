@@ -15,6 +15,10 @@ struct EventDetailView: View {
     
     @State var daysFromNow: String = ""
     
+    @State var displayAddToCalendarModal: Bool = false
+    @State private var alertTitle: String = ""
+    @State private var alertMessage: String = ""
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -34,6 +38,14 @@ struct EventDetailView: View {
                     Text(self.daysFromNow)
                         .font(.eventDaysFromNowFont)
                         .foregroundStyle(.red)
+                }
+                .padding()
+                
+                Button {
+                    self.displayAddToCalendarModal = true
+                    requestCalendarAccess(CalendarFightEvent(title: event.title, date: event.eventDate ?? Date(), description: "\(event.title)!!! LET'S FUCKING GO!!!!"))
+                } label: {
+                    Text("Add to Your Calendar")
                 }
                 .padding()
                 
@@ -86,6 +98,9 @@ struct EventDetailView: View {
                     
                 }
             } // ScrollView
+            .alert(isPresented: $displayAddToCalendarModal) {
+                Alert(title: Text(alertTitle), message: Text(alertMessage))
+            }
             .padding()
             .onAppear {
                 self.computeDaysFromNow()
@@ -109,6 +124,36 @@ struct EventDetailView: View {
             self.daysFromNow = "\(daysAwayFrom) days from now"
         } else {
             print("Can't compute days away from")
+        }
+    }
+    
+    private func requestCalendarAccess(_ event: CalendarFightEvent) {
+        let eventStore = EKEventStore()
+        
+        eventStore.requestWriteOnlyAccessToEvents() { (granted, error) in
+            if granted && error == nil {
+                let calendarEvent = EKEvent(eventStore: eventStore)
+                calendarEvent.title = event.title
+                calendarEvent.startDate = event.date
+                calendarEvent.endDate = event.date.addingTimeInterval(3600)
+                calendarEvent.notes = event.description
+                calendarEvent.calendar = eventStore.defaultCalendarForNewEvents
+                
+                do {
+                    try eventStore.save(calendarEvent, span: .thisEvent)
+                    alertTitle = "Event Added"
+                    alertMessage = "The event has been successfully added to your calendar."
+                    displayAddToCalendarModal = true
+                } catch {
+                    alertTitle = "Error"
+                    alertMessage = "There was an error adding the event to your calendar."
+                    displayAddToCalendarModal = true
+                }
+            } else {
+                alertTitle = "Error"
+                alertMessage = "Access to the calendar was denied."
+                displayAddToCalendarModal = true
+            }
         }
     }
 }
@@ -152,4 +197,12 @@ struct OctagonShape: Shape {
 
 #Preview {
     EventDetailView(event: MockData.mockEvent1)
+}
+
+// https://medium.com/@thibault.giraudon/how-to-add-events-to-your-calendar-using-swiftui-and-eventkit-9b81528bf397 step 3
+struct CalendarFightEvent: Identifiable {
+    let id: UUID = UUID()
+    let title: String
+    let date: Date
+    let description: String
 }

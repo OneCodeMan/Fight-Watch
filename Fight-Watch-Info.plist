@@ -6,6 +6,10 @@
 	<string>ca-app-pub-8518848174079347~4573268505</string>
 	<key>GADIsAdManagerApp</key>
 	<true/>
+	<key>NSCalendarUsageDescription</key>
+	<string>Request calendar access to add event</string>
+	<key>NSCalendarsWriteOnlyAccessUsageDescription</key>
+	<string>Request calendar access to add event</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
@@ -180,7 +184,7 @@
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIImageName</key>
-		<string>launch_screen</string>
+		<string>launch_screen2</string>
 		<key>UILaunchScreen</key>
 		<dict>
 			<key>UIImageRespectsSafeAreaInsets</key>
