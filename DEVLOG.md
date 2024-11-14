@@ -13,12 +13,9 @@ I've learned about environment variables. it gets easier to do these.
 ## Wave 1.1
 
 GOOD TO HAVE:
+- [ ] Widget View of most upcoming fight.
 ,,
 Functionality
-- [ ] Add to Calendar option
-    - [ ] https://chatgpt.com/share/67338563-0128-8004-b437-5361037569a9
-    - [ ] https://medium.com/@thibault.giraudon/how-to-add-events-to-your-calendar-using-swiftui-and-eventkit-9b81528bf397
-
 - [ ] "Rate us on the app store"!
 ,,
 UI
@@ -30,7 +27,6 @@ UI
  - [ ] how do I keep pumping out ads?
 
 ## Wave 1.2
-- [ ] Widget View of most upcoming fight.
 - [ ] DetailView
     - [ ] Have indicator for main event (and co-main)
     - [ ] "BIG names"
@@ -38,6 +34,9 @@ UI
 # History
 
 ## November 13, 2024
+- [x] Add to Calendar option
+    - [x] https://chatgpt.com/share/67338563-0128-8004-b437-5361037569a9
+    - [x] https://medium.com/@thibault.giraudon/how-to-add-events-to-your-calendar-using-swiftui-and-eventkit-9b81528bf397
 MUST-HAVES
 - [x] App icon
 - [x] Launch Screen
