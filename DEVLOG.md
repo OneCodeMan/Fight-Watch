@@ -14,6 +14,9 @@ I've learned about environment variables. it gets easier to do these.
 
 GOOD TO HAVE:
 - [ ] Widget View of most upcoming fight.
+- [ ] Quick action to see latest event.
+    - https://medium.com/appcent/add-quick-actions-to-swiftui-app-4498df911b93
+    - https://medium.com/@amnmustafa15/using-static-quick-actions-to-navigate-to-different-swiftui-views-dcbcc9661744
 ,,
 Functionality
 - [ ] "Rate us on the app store"!
@@ -32,6 +35,9 @@ UI
     - [ ] "BIG names"
 
 # History
+
+## November 14, 2024
+- [x] Style button
 
 ## November 13, 2024
 - [x] Add to Calendar option

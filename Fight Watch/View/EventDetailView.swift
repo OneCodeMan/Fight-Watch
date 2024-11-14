@@ -10,6 +10,7 @@ import EventKit
 
 struct EventDetailView: View {
     @Environment(\.openURL) var openURL
+    @Environment(\.colorScheme) var colorScheme
     @StateObject var adViewModel: InterstitialViewModel = InterstitialViewModel()
     let event: FightEvent
     
@@ -48,8 +49,13 @@ struct EventDetailView: View {
                     
                 } label: {
                     Text("Add to Your Calendar")
+                        .padding()
+                        .foregroundColor(colorScheme == .dark ? .white : .black)
+                        .background(Color.teal)
+                        .cornerRadius(10)
                 }
                 .padding()
+                .shadow(color: .teal, radius: 2, y: 2)
                 
                 Divider()
                 
