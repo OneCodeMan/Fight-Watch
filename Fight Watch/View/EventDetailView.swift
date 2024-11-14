@@ -149,7 +149,12 @@ struct EventDetailView: View {
         let calendar = Calendar.current
         let components = calendar.dateComponents([.day], from: .now, to: eventDate)
         if let daysAwayFrom = components.day {
-            self.daysFromNow = "\(daysAwayFrom) days from now"
+            if daysAwayFrom == 1 {
+                self.daysFromNow = "1 day from now"
+            } else {
+                self.daysFromNow = "\(daysAwayFrom) days from now"
+            }
+            
         } else {
             print("Can't compute days away from")
         }

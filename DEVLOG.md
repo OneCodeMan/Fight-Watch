@@ -2,6 +2,10 @@
 
 # Yap
 
+## Nov 14, 2024
+HBD NICOLE
+LET'S GET THIS PUBLISHED!!
+
 ## Nov 12, 2024
 From Pinselton, I've learned how to implement basic ads, App Tracking, I've learned about UserDefaults.
 I've learned about environment variables. it gets easier to do these.
