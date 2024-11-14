@@ -16,7 +16,7 @@ struct Fight_WatchApp: App {
     
     init() {
         GADMobileAds.sharedInstance().start(completionHandler: nil)
-        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "2bfafec615547fa2bc6055e2865d1b89" ]
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "d45f40428ec9a4923f03531e3846d3c2" ]
     }
     
     var body: some Scene {

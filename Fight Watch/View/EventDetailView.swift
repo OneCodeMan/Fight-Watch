@@ -147,9 +147,13 @@ struct EventDetailView: View {
         let eventDate = event.eventDate ?? Date()
                 
         let calendar = Calendar.current
-        let components = calendar.dateComponents([.day], from: .now, to: eventDate)
-        if let daysAwayFrom = components.day {
-            if daysAwayFrom == 1 {
+        let components = calendar.dateComponents([.day, .hour], from: .now, to: eventDate)
+        if let daysAwayFrom = components.day, let hoursAwayFrom = components.hour {
+            if daysAwayFrom == 0 && hoursAwayFrom < 14 {
+                self.daysFromNow = "TODAY"
+            } else if daysAwayFrom == 0 && hoursAwayFrom > 14 {
+                self.daysFromNow = "1 day from now"
+            } else if daysAwayFrom == 1 && hoursAwayFrom > 5 {
                 self.daysFromNow = "1 day from now"
             } else {
                 self.daysFromNow = "\(daysAwayFrom) days from now"
@@ -158,6 +162,8 @@ struct EventDetailView: View {
         } else {
             print("Can't compute days away from")
         }
+        // TODO: FIX
+        self.daysFromNow = ""
     }
     
     private func requestCalendarAccess(_ event: CalendarFightEvent) {
