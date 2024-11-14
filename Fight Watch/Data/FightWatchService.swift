@@ -30,10 +30,11 @@ final class FightWatchService: ObservableObject {
             var mmaEvents = try decoder.decode(MMAEvents.self, from: data)
             
             let currentDate = Date.now
+            let twoDaysAgo = Calendar.current.date(byAdding: .day, value: -7, to: Date.now) ?? Date()
             
             mmaEvents = mmaEvents
                 .sorted { ($0.eventDate ?? Date.distantPast) < ($1.eventDate ?? Date.distantPast) }
-                .filter { ($0.eventDate ?? Date.distantPast) >= currentDate }
+                .filter { ($0.eventDate ?? Date.distantPast) >= twoDaysAgo }
             
             return mmaEvents
         } catch {
