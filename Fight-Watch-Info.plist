@@ -184,7 +184,7 @@
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIImageName</key>
-		<string>launch_screen2</string>
+		<string>launch_screen</string>
 		<key>UILaunchScreen</key>
 		<dict>
 			<key>UIImageRespectsSafeAreaInsets</key>

@@ -16,6 +16,7 @@ struct EventDetailView: View {
     @State var daysFromNow: String = ""
     
     @State var displayAddToCalendarModal: Bool = false
+    @State var displayAddToCalendarConfirmationModal: Bool = false
     @State private var alertTitle: String = ""
     @State private var alertMessage: String = ""
     
@@ -43,7 +44,8 @@ struct EventDetailView: View {
                 
                 Button {
                     self.displayAddToCalendarModal = true
-                    requestCalendarAccess(CalendarFightEvent(title: event.title, date: event.eventDate ?? Date(), description: "\(event.title)!!! LET'S FUCKING GO!!!!"))
+                    requestCalendarAccess(CalendarFightEvent(title: event.title, date: event.eventDate ?? Date(), description: "\(event.title)!!!"))
+                    
                 } label: {
                     Text("Add to Your Calendar")
                 }
@@ -98,8 +100,28 @@ struct EventDetailView: View {
                     
                 }
             } // ScrollView
-            .alert(isPresented: $displayAddToCalendarModal) {
-                Alert(title: Text(alertTitle), message: Text(alertMessage))
+            .alert("Add this card to your calendar?", isPresented: $displayAddToCalendarModal) {
+                Button(String(localized: "YES")) {
+//                    self.displayAddToCalendarModal = false
+                    self.displayAddToCalendarConfirmationModal = true
+                }
+                Button(String(localized: "NO"), role: .destructive) {
+                }
+            }
+            .alert("\(event.title) Added To Calendar", isPresented: $displayAddToCalendarConfirmationModal) {
+                Button(String(localized: "OK")) {
+                }
+                Button(String(localized: "Take Me To My Calendar")) {
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "MMM d, yyyy"
+                    if let date = dateFormatter.date(from: event.date) {
+                        let timestamp = date.timeIntervalSinceReferenceDate
+                        if let calendarURL = URL(string: "calshow:\(timestamp)") {
+                            UIApplication.shared.open(calendarURL, options: [:], completionHandler: nil)
+                        }
+                    }
+                    
+                }
             }
             .padding()
             .onAppear {
