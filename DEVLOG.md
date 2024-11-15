@@ -14,29 +14,21 @@ I've learned about environment variables. it gets easier to do these.
 
 # WAVE 1
 
-## Wave 1.1
-
-GOOD TO HAVE:
-- [ ] Widget View of most upcoming fight.
+## Wave 1.1 - Cowboy shit. 10x dev shit. Post-Publish.
+- [ ] Widget View 
+    - Most upcoming fight.
 - [ ] Quick action to see latest event.
     - https://medium.com/appcent/add-quick-actions-to-swiftui-app-4498df911b93
     - https://medium.com/@amnmustafa15/using-static-quick-actions-to-navigate-to-different-swiftui-views-dcbcc9661744
-,,
-Functionality
 - [ ] "Rate us on the app store"!
-,,
-UI
+- [ ] DetailView
+    - [ ] Have indicator for main event (and co-main)
+    - [ ] "BIG names" indicator
 - [ ] Banner ad list view
 - [ ] Octagon on text
 - [ ] Add fighter icon
-,,
-- [ ] Ads
- - [ ] how do I keep pumping out ads?
 
 ## Wave 1.2
-- [ ] DetailView
-    - [ ] Have indicator for main event (and co-main)
-    - [ ] "BIG names"
 
 # History
 
