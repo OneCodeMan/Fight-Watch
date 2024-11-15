@@ -23,6 +23,7 @@ I've learned about environment variables. it gets easier to do these.
 - [ ] "Rate us on the app store"!
 - [ ] DetailView
     - [ ] Have indicator for main event (and co-main)
+    - [ ] Days from now
     - [ ] "BIG names" indicator
 - [ ] Banner ad list view
 - [ ] Octagon on text
